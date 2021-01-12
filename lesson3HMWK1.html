@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <style>
+  h2 {
+    text-align: center;
+  }
+.makecenter {
+    text-align: center;
+  }
+  #urlInput {
+    width: 50%;
+    height: 25px;
+
+  }
+  #submitbox{
+    width: 20%;
+    /* tried to put height here to adjust the size of submit button
+    but didn't work */
+  }
+
+</style>
+<title> </title>
+
+</head>
+
+<body>
+    <p>
+      <h2> Enter A URL To A Photo </h2>
+    </p>
+    <div class="makecenter">
+
+
+        <input id="urlInput" type = "text" />
+      <!--Had to put an id on the input tag, not the div, in order to adjust the size of
+      the input box -->
+        <br> <br>
+        <button onclick="showImage()" id="submitbox"> Click to Display Image Below </button>
+
+
+  </div>
+    <br> </br>
+
+    <div class="makecenter">
+      <img src="" id="anyImage" onclick = "showBorderOnClick()" />
+    </div>
+
+
+  <script>
+  function showImage(){
+    //Get a reference to the inputbox
+    //Get url from inputbox
+    //Need a reference to the image element
+    //make image elements source equal to the url
+    var urlInputElement = document.getElementById("urlInput");
+    var url = urlInputElement.value
+    var imageElement = document.getElementById ("anyImage");
+    imageElement.src= url
+
+  }
+
+  function showBorderOnClick() {
+    //Get reference to image element
+    var imageElement = document.getElementById ("anyImage");
+    imageElement.style.border = "10px solid black"
+  }
+
+  </script>
+
+</body>
+
+
+</html>

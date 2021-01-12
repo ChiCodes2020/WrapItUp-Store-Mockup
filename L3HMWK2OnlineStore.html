@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Online African Headwrap Store </title>
+    <style>
+        .itemPicSize{
+          width:250px;
+          height:300px;
+        }
+        #itemsDiv{
+          margin-left: 5%;
+          float: left;
+          width: 45%;
+          background-color: powderblue;
+        }
+        #itemTitle{
+          margin-left: 5%;
+          font-family: cursive;
+        }
+        #nameQuantDiv{
+          background-color: #ee82ee;
+          position: absolute;
+          margin-left: 28%;
+          top:35%;
+          height: 80%;
+          width: 45%;
+          text-align: center;
+
+        }
+        #halfBackground{
+          float:right;
+          background-color: #ffa500;
+          width: 45%;
+          height: 1005.88px;
+          margin-right: 5%;
+        }
+        header{
+          background-color: black;
+          text-align: center;
+          padding: 5px;
+          color: white;
+          margin-left: 5%;
+          margin-right: 5%;
+          font-size: 20px;
+          font-family:serif;
+
+        }
+        #headerPara{
+          word-spacing: 40px;
+        }
+
+        span{
+          font-size: 40px;
+          text-align: center;
+          word-spacing: normal;
+          padding-right: 20px;
+          font-family: fantasy;
+        }
+
+
+  </style>
+
+</head>
+  <body>
+    <header>
+      <p id="headerPara"> SHOP SALE STORY
+      <span> WRAP IT UP </span>
+      SEARCH ACCOUNT CART
+    </p>
+    </header>
+
+      <div id="itemsDiv">
+          <h1 id="itemTitle">The Headwraps </h1>
+          <img class="itemPicSize" src="ALLimages/headwrap-yellow-blue.jpg"/>
+          <br>
+          <img class="itemPicSize" src="ALLimages/headwrap-kente-queen.jpg"/>
+          <br>
+          <img class="itemPicSize" src="ALLimages/headwrap-blue-orange.jpg"/>
+      </div>
+      <div id="nameQuantDiv">
+            <h2> Please Enter/Select Quantity </h2>
+            <br> 
+            <p> Nubian (Gold/Blue)
+              <br>$18.00
+             </p>
+            <input id="NubianInput1" type="number" />
+            <p> Kente Queen (Orange/Red/Green)
+              <br>$20.00
+             </p>
+            <input id="KenteInput2" type="number" />
+            <p> Goddess (Blue/Orange)
+              <br>$15.00
+            </p>
+            <input id="GoddessInput3" type="number" />
+            <br><br>
+            <button type="submit" onclick="DisplaySubtotal()" id="submitbox"> Subtotal </button>
+
+            <br>
+            <h3 id="subtotal">  </h3>
+
+      </div>
+      <div id="halfBackground">
+        <p>  </p>
+      </div>
+
+      <script>
+
+      function DisplaySubtotal(){
+
+        var Nubianinput= document.getElementById('NubianInput1').value;
+        var Kenteinput= document.getElementById('KenteInput2').value;
+        var Goddessinput=document.getElementById('GoddessInput3').value;
+
+        var NubianTotal= Nubianinput*18;
+        var KenteTotal= Kenteinput*20;
+        var GoddessTotal= Goddessinput*15;
+        var finalAmount= NubianTotal+KenteTotal+GoddessTotal;
+        /*var nubianPrice= 18
+        var kentePrice= 20
+        var goddessPrice= 15
+
+        var NubianQuantity = document.getElementById("NubianInput1").value;
+        var KenteQuantity = document.getElementById("KenteInput2").value;
+        var GoddessQuantity= document.getElementById("GoddessInput3").value;
+
+        var finalAmount= (nubianPrice*NubianQuantity)+(kentePrice*KenteQuantity)+(goddessPrice*GoddessQuantity);
+        */
+        document.getElementById('subtotal').innerHTML= "Total= "+"$" +finalAmount+".00";
+      }
+
+       </script>
+  </body>
+
+</html>
